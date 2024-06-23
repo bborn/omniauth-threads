@@ -25,7 +25,7 @@ module OmniAuth
 
 
 
-      uid { raw_info['user_id'] }
+      uid { raw_info['id'] }
 
       info do
         {}
@@ -38,8 +38,7 @@ module OmniAuth
       end
 
       def raw_info
-        {}
-        # @raw_info ||= access_token.get('/me').parsed
+        @raw_info ||= access_token.get('/me').parsed
       end
       
     end
