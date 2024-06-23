@@ -1,14 +1,13 @@
 # -*- encoding: utf-8 -*-
 $:.push File.expand_path('../lib', __FILE__)
-require 'omniauth/facebook/version'
+require 'omniauth/threads/version'
 
 Gem::Specification.new do |s|
-  s.name     = 'omniauth-facebook'
-  s.version  = OmniAuth::Facebook::VERSION
-  s.authors  = ['Mark Dodwell', 'Josef Šimánek']
-  s.email    = ['mark@madeofcode.com', 'retro@ballgag.cz']
-  s.summary  = 'Facebook OAuth2 Strategy for OmniAuth'
-  s.homepage = 'https://github.com/simi/omniauth-facebook'
+  s.name     = 'omniauth-threads'
+  s.version  = OmniAuth::Threads::VERSION
+  s.summary  = 'Threads OAuth2 Strategy for OmniAuth'
+  s.homepage = 'https://github.com/bborn/omniauth-threads'
+  s.authors  = ['Bruno Bornsztein']
   s.license  = 'MIT'
 
   s.files         = `git ls-files`.split("\n")
