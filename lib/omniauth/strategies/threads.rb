@@ -28,7 +28,13 @@ module OmniAuth
       uid { raw_info['id'] }
 
       info do
-        {}
+        {
+          :nickname => raw_info['username'],
+          :name => raw_info['username'],
+          :email => raw_info["email"],
+          :image => raw_info['threads_profile_picture_url'],
+          :description => raw_info['threads_biography'],
+        }
       end
 
       extra do
@@ -38,7 +44,7 @@ module OmniAuth
       end
 
       def raw_info
-        @raw_info ||= access_token.get('/me').parsed
+        @raw_info ||= access_token.get('/me?fields=id,username,threads_profile_picture_url,threads_biography').parsed
       end
       
     end
